@@ -5,7 +5,7 @@ https://kenwheeler.github.io/slick/
 
 ## USING
 ### Install
-npm install slick-carousel --save-dev
+npm install slick-carousel --save-dev  
 add to project JS и SCSS
 
 ### Settings
