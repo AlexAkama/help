@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha Test</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <form action="test.php" method="POST">
+            <h4>ТЕСТ</h4>
+            <p>Google reCAPTCHA v3</p>
+            <input type="text" name="text" placeholder="Введите что-нибуть..." required>
+            <input type="hidden" id="g-recaptcha" name="captcha">
+            <div class="captcha" id="captcha"></div>
+            <button class="submit" type="submit" name="submit-btn" value="Success" disabled>Success</button>
+            <button class="submit" type="submit" name="submit-btn" value="Failure" disabled>Failure</button>
+        </form>
+    </div>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=<SITE_KEY>"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('<SITE_KEY>', {
+                action: 'homepage'
+            })
+                .then(function (token) {
+                    console.log(token);
+                    document.querySelector('.captcha').textContent = 'Captcha ready.';
+                    document.querySelector('#g-recaptcha').value = token;
+                    document.querySelectorAll('.submit').forEach(e => e.removeAttribute('disabled'));
+                });
+        });
+    </script>
+
+    <!-- <script>
+        var onloadCallback = function () {
+            grecaptcha.render('captcha', { 'sitekey': '<SITE_KEY>' });
+        }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+    </script> -->
+
+</body>
+
+</html>
