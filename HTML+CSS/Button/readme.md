@@ -1,7 +1,7 @@
 # BUTTON
 
 ### Reset style
-```
+```CSS
 button {
   padding: 0;
   border: none;
