@@ -8,4 +8,4 @@ Codes, plugins and links for programming
 
 ### PLUGINS
 * [ReCaptcha v3](https://github.com/AlexAkama/help/tree/main/Plugins/ReCaptcha%20v3)
-* [SlickSlider](https://github.com/AlexAkama/help/tree/main/Plugins/ReCaptcha%20v3)
+* [SlickSlider](https://github.com/AlexAkama/help/tree/main/Plugins/SlickSlider)
